@@ -1,0 +1,41 @@
+using System;
+using System.Runtime.InteropServices;
+using System.Threading;
+
+namespace FizzBuzz
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Choose a number: ");
+            long limit = Convert.ToInt64(Console.ReadLine());
+            Console.Write("Choose a divider: ");
+            long firstDivider = Convert.ToInt64(Console.ReadLine());
+            Console.Write("Choose another divider: ");
+            long secondDivider = Convert.ToInt64(Console.ReadLine());
+            for (long i = 1; i <= limit; i++)
+            {
+                if (i % firstDivider == 0 && i % secondDivider == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                } 
+                else if(i % firstDivider == 0)
+                {
+                    Console.WriteLine("Fizz");   
+                }
+                else if(i % secondDivider == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            
+        }
+
+
+    }
+}
